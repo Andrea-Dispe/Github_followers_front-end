@@ -18,7 +18,8 @@ function App() {
     axios
       .get(api_url)
       .then((res) => {
-        setFollowers(res.data);
+        console.log("sorted", res.data);
+        setFollowers(res.data.sort((a, b) => (a.login.toUpperCase() > b.login.toUpperCase() ? 1 : -1)));
       })
       .catch((err) => console.log(err));
   }, []);
@@ -45,13 +46,21 @@ function App() {
               </tr>
             </thead>
             <tbody>
-                {users.map((follower) => (
-                  <tr key={follower.id}>
-                    <td><img className='avatar' src={follower.avatar_url} alt={follower.login}/></td>
-                    <td>{follower.login}</td>
-                    <td><a href={follower.html_url}>Visit</a></td>
-                  </tr>
-                ))}
+              {users.map((follower) => (
+                <tr key={follower.id}>
+                  <td>
+                    <img
+                      className="avatar"
+                      src={follower.avatar_url}
+                      alt={follower.login}
+                    />
+                  </td>
+                  <td>{follower.login}</td>
+                  <td>
+                    <a href={follower.html_url}>Visit</a>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
 
