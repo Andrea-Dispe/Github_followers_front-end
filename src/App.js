@@ -7,8 +7,8 @@ import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import { paginate } from "./utilities/paginate";
 
-import { Table} from 'antd';
-
+import { Input } from 'antd';
+import { Table } from "antd";
 
 function App() {
   const api_url = "https://api.github.com/users/mosh-hamedani/followers";
@@ -16,25 +16,27 @@ function App() {
   const [followers, setFollowers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const { Search } = Input;
+
   const pageSize = 6;
   const users = paginate(followers, currentPage, pageSize);
   const columns = [
     {
-      title: 'Avatar',
-      dataIndex: 'avatar_url',
-      key: 'avatar_url',
-      render: dataIndex => <img src={dataIndex} alt='s'/>
+      title: "Avatar",
+      dataIndex: "avatar_url",
+      key: "avatar_url",
+      render: (dataIndex) => <img src={dataIndex} alt="s" />,
     },
     {
-      title: 'Username',
-      dataIndex: 'login',
-      key: 'login',
+      title: "Username",
+      dataIndex: "login",
+      key: "login",
     },
     {
-      title: 'Repository',
-      dataIndex: 'html_url',
-      key: 'html_url',
-      render: dataIndex => <a href={dataIndex}>Visit</a>,
+      title: "Repository",
+      dataIndex: "html_url",
+      key: "html_url",
+      render: (dataIndex) => <a href={dataIndex}>Visit</a>,
     },
   ];
 
@@ -43,7 +45,11 @@ function App() {
       .get(api_url)
       .then((res) => {
         console.log("sorted", res.data);
-        setFollowers(res.data.sort((a, b) => (a.login.toUpperCase() > b.login.toUpperCase() ? 1 : -1)));
+        setFollowers(
+          res.data.sort((a, b) =>
+            a.login.toUpperCase() > b.login.toUpperCase() ? 1 : -1
+          )
+        );
       })
       .catch((err) => console.log(err));
   }, []);
@@ -52,15 +58,29 @@ function App() {
     setCurrentPage(page);
   }
 
+  function onSearch() {
+    console.log('onsearch clicked')
+  }
 
   return (
     <>
       <Layout>
         <Header>
           <Navbar />
+          <Search
+            placeholder="input search text"
+            allowClear
+            onSearch={onSearch}
+            style={{ width: 200, margin: "0 10px" }}
+          />
         </Header>
         <Content>
-        <Table dataSource={followers} pagination={{ pageSize }} columns={columns} />;
+          <Table
+            dataSource={followers}
+            pagination={{ pageSize }}
+            columns={columns}
+          />
+          ;
           {/* <Pagination
             itemsCount={followers.length}
             pageSize={pageSize}
@@ -75,7 +95,6 @@ function App() {
 }
 
 export default App;
-
 
 // backup table
 
