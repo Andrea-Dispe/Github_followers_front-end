@@ -3,23 +3,26 @@ import axios from "axios";
 import { Layout } from "antd";
 
 import "./App.css";
-import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import { paginate } from "./utilities/paginate";
+import logo from "./images/logo.png";
 
-import { Input } from 'antd';
+import { Input } from "antd";
 import { Table } from "antd";
 
 function App() {
   const api_url = "https://api.github.com/users/mosh-hamedani/followers";
+  const pageSize = 6;
   const { Header, Footer, Content } = Layout;
-  const [followers, setFollowers] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-
   const { Search } = Input;
 
-  const pageSize = 6;
-  const users = paginate(followers, currentPage, pageSize);
+  const [followers, setFollowers] = useState([]);
+  const [filterFollowers, setFilterFollowers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [search, setSearch] = useState('');
+
+  // const users = paginate(followers, currentPage, pageSize);
+
   const columns = [
     {
       title: "Avatar",
@@ -40,6 +43,10 @@ function App() {
     },
   ];
 
+  function handlePageChange(page) {
+    setCurrentPage(page);
+  }
+
   useEffect(() => {
     axios
       .get(api_url)
@@ -54,29 +61,30 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  function handlePageChange(page) {
-    setCurrentPage(page);
-  }
 
-  function onSearch() {
-    console.log('onsearch clicked')
-  }
+  useEffect(()=> {
+    setFilterFollowers(
+      followers.filter(follower => {
+        return follower.login.toLowerCase().includes(search.toLowerCase())
+      })
+    )
+  }, [search, followers])
 
   return (
     <>
       <Layout>
         <Header>
-          <Navbar />
+        <div id="logo"><img src={logo} alt="Founders lair logo"/></div>
           <Search
-            placeholder="input search text"
+            placeholder="search"
             allowClear
-            onSearch={onSearch}
-            style={{ width: 200, margin: "0 10px" }}
+            onChange={(e) => {setSearch(e.target.value)}}
+            style={{ width: 441, margin: "0 113px" }}
           />
         </Header>
         <Content>
           <Table
-            dataSource={followers}
+            dataSource={filterFollowers}
             pagination={{ pageSize }}
             columns={columns}
           />
