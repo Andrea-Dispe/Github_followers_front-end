@@ -2,48 +2,129 @@
 
 /* CSS Reset */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
@@ -57,11 +138,13 @@ nav {
 section.ant-layout {
   margin: 0 auto;
   /* width: 1140px; */
+  height: 100vh;
   width: 100%;
 }
 
 .ant-layout-content {
   padding: 25px;
+  flex: none;
 }
 
 .ant-layout-header {
@@ -73,7 +156,7 @@ section.ant-layout {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05), 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#header-wrapper{
+#header-wrapper {
   max-width: 1140px;
   display: flex;
   align-items: center;
@@ -82,23 +165,22 @@ section.ant-layout {
 }
 
 #logo {
-margin-left: 150px;
+  margin-left: 10%;
 }
-
 
 @media screen and (min-width: 1280px) {
   main {
-  width: 674px;
+    width: 674px;
   }
 }
 @media screen and (min-width: 768px) {
   main {
-  width: 720px;
+    width: 720px;
   }
 }
 @media screen and (max-width: 767px) {
   main {
-  width: 345px;
+    width: 345px;
   }
 }
 main {
@@ -114,11 +196,16 @@ td {
   vertical-align: middle;
 }
 
+.ant-input-group-wrapper {
+  margin-left: 7%;
+}
 
-
-
-.columns{
+.columns {
   height: 45px;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 0px;
 }
 
 .pagination {
@@ -127,18 +214,51 @@ td {
   list-style: none;
 }
 
+.main-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer{
+  width: 100%;
+  margin-left: 10%;
+  line-height: 40px;
+  /* max-width: 1140px;
+  margin: 0 auto 50px auto;
+  height: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-flow: column;
+  padding-left: 5%; */
+}
+
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li svg {
+  width: 30px;
+  height: 30px;
+}
+
+
 .page-item a {
   color: #666666;
   padding: 0 6px;
 }
 
 .active a {
-  border: 1px solid #FF66CC;
+  border: 1px solid #ff66cc;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05), 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
 
-.avatar, .ant-table-cell img{
+.avatar,
+.ant-table-cell img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -149,12 +269,14 @@ td {
   justify-content: center;
 }
 
-.ant-pagination-item-active a, .ant-table-cell a {
-  color: #FF66CC;
+.ant-pagination-item-active a,
+.ant-table-cell a {
+  color: #ff66cc;
 }
 
 .ant-pagination-item-active,
-.ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:hover {
   border-color: #ff66cc;
 }
 
@@ -193,3 +315,9 @@ h5 {
   font-size: 14px;
   color: #333333;
 }
+
+.social-icons {
+  display: flex;
+  list-style: none;
+}
+

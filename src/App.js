@@ -4,6 +4,7 @@ import { Layout } from "antd";
 
 import "./App.css";
 import Pagination from "./components/Pagination";
+import Piede from "./components/Footer";
 import { paginate } from "./utilities/paginate";
 import logo from "./images/logo.png";
 import random from "./images/random.svg";
@@ -88,21 +89,23 @@ function App() {
             />
           </div>
         </Header>
-        <Content>
-          <Table
-            dataSource={filterFollowers}
-            pagination={{ pageSize }}
-            columns={columns}
-          />
-          ;
-          {/* <Pagination
+        <div className="main-wrapper"> 
+          <Content>
+            <Table
+              dataSource={filterFollowers}
+              pagination={{ pageSize }}
+              columns={columns}
+            />
+            ;
+            {/* <Pagination
             itemsCount={followers.length}
             pageSize={pageSize}
             currentPage={currentPage}
             onPageChange={handlePageChange}
           /> */}
-        </Content>
-        <Footer></Footer>
+          </Content>
+          <Piede></Piede>
+        </div>
       </Layout>
     </>
   );
