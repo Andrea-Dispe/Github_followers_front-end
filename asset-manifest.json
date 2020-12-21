@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Github_followers_app/static/css/main.7501d20a.chunk.css",
+    "main.css": "/Github_followers_app/static/css/main.446de11b.chunk.css",
     "main.js": "/Github_followers_app/static/js/main.2cbf37d2.chunk.js",
     "main.js.map": "/Github_followers_app/static/js/main.2cbf37d2.chunk.js.map",
     "runtime-main.js": "/Github_followers_app/static/js/runtime-main.0ce1a4f1.js",
@@ -12,14 +12,14 @@
     "static/js/3.2916922c.chunk.js.map": "/Github_followers_app/static/js/3.2916922c.chunk.js.map",
     "index.html": "/Github_followers_app/index.html",
     "static/css/2.4d98ed14.chunk.css.map": "/Github_followers_app/static/css/2.4d98ed14.chunk.css.map",
-    "static/css/main.7501d20a.chunk.css.map": "/Github_followers_app/static/css/main.7501d20a.chunk.css.map",
+    "static/css/main.446de11b.chunk.css.map": "/Github_followers_app/static/css/main.446de11b.chunk.css.map",
     "static/js/2.439f5835.chunk.js.LICENSE.txt": "/Github_followers_app/static/js/2.439f5835.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ce1a4f1.js",
     "static/css/2.4d98ed14.chunk.css",
     "static/js/2.439f5835.chunk.js",
-    "static/css/main.7501d20a.chunk.css",
+    "static/css/main.446de11b.chunk.css",
     "static/js/main.2cbf37d2.chunk.js"
   ]
 }
