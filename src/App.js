@@ -85,7 +85,7 @@ function App() {
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
-              style={{ width: 441, margin: "0 113px" }}
+              style={{ width: 441}}
             />
           </div>
         </Header>
@@ -96,7 +96,7 @@ function App() {
               pagination={{ pageSize }}
               columns={columns}
             />
-            
+
             {/* <Pagination
             itemsCount={followers.length}
             pageSize={pageSize}
