@@ -89,14 +89,14 @@ function App() {
             />
           </div>
         </Header>
-        <div className="main-wrapper"> 
+        <div className="main-wrapper">
           <Content>
             <Table
               dataSource={filterFollowers}
               pagination={{ pageSize }}
               columns={columns}
             />
-            ;
+            
             {/* <Pagination
             itemsCount={followers.length}
             pageSize={pageSize}
