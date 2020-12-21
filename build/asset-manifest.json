@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/Github_followers_app/static/css/main.70c7f2ce.chunk.css",
-    "main.js": "/Github_followers_app/static/js/main.408b932b.chunk.js",
-    "main.js.map": "/Github_followers_app/static/js/main.408b932b.chunk.js.map",
-    "runtime-main.js": "/Github_followers_app/static/js/runtime-main.94a5855a.js",
-    "runtime-main.js.map": "/Github_followers_app/static/js/runtime-main.94a5855a.js.map",
+    "main.css": "/Github_followers_app/static/css/main.4f716516.chunk.css",
+    "main.js": "/Github_followers_app/static/js/main.b927cbba.chunk.js",
+    "main.js.map": "/Github_followers_app/static/js/main.b927cbba.chunk.js.map",
+    "runtime-main.js": "/Github_followers_app/static/js/runtime-main.0ce1a4f1.js",
+    "runtime-main.js.map": "/Github_followers_app/static/js/runtime-main.0ce1a4f1.js.map",
     "static/css/2.4d98ed14.chunk.css": "/Github_followers_app/static/css/2.4d98ed14.chunk.css",
-    "static/js/2.c1dfd36e.chunk.js": "/Github_followers_app/static/js/2.c1dfd36e.chunk.js",
-    "static/js/2.c1dfd36e.chunk.js.map": "/Github_followers_app/static/js/2.c1dfd36e.chunk.js.map",
-    "static/js/3.ff85be79.chunk.js": "/Github_followers_app/static/js/3.ff85be79.chunk.js",
-    "static/js/3.ff85be79.chunk.js.map": "/Github_followers_app/static/js/3.ff85be79.chunk.js.map",
+    "static/js/2.439f5835.chunk.js": "/Github_followers_app/static/js/2.439f5835.chunk.js",
+    "static/js/2.439f5835.chunk.js.map": "/Github_followers_app/static/js/2.439f5835.chunk.js.map",
+    "static/js/3.2916922c.chunk.js": "/Github_followers_app/static/js/3.2916922c.chunk.js",
+    "static/js/3.2916922c.chunk.js.map": "/Github_followers_app/static/js/3.2916922c.chunk.js.map",
     "index.html": "/Github_followers_app/index.html",
     "static/css/2.4d98ed14.chunk.css.map": "/Github_followers_app/static/css/2.4d98ed14.chunk.css.map",
-    "static/css/main.70c7f2ce.chunk.css.map": "/Github_followers_app/static/css/main.70c7f2ce.chunk.css.map",
-    "static/js/2.c1dfd36e.chunk.js.LICENSE.txt": "/Github_followers_app/static/js/2.c1dfd36e.chunk.js.LICENSE.txt"
+    "static/css/main.4f716516.chunk.css.map": "/Github_followers_app/static/css/main.4f716516.chunk.css.map",
+    "static/js/2.439f5835.chunk.js.LICENSE.txt": "/Github_followers_app/static/js/2.439f5835.chunk.js.LICENSE.txt",
+    "static/media/random.9f120192.svg": "/Github_followers_app/static/media/random.9f120192.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.94a5855a.js",
+    "static/js/runtime-main.0ce1a4f1.js",
     "static/css/2.4d98ed14.chunk.css",
-    "static/js/2.c1dfd36e.chunk.js",
-    "static/css/main.70c7f2ce.chunk.css",
-    "static/js/main.408b932b.chunk.js"
+    "static/js/2.439f5835.chunk.js",
+    "static/css/main.4f716516.chunk.css",
+    "static/js/main.b927cbba.chunk.js"
   ]
 }

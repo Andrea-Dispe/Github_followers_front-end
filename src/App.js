@@ -6,6 +6,7 @@ import "./App.css";
 import Pagination from "./components/Pagination";
 import { paginate } from "./utilities/paginate";
 import logo from "./images/logo.png";
+import random from "./images/random.svg";
 
 import { Input } from "antd";
 import { Table } from "antd";
@@ -19,7 +20,7 @@ function App() {
   const [followers, setFollowers] = useState([]);
   const [filterFollowers, setFilterFollowers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
 
   // const users = paginate(followers, currentPage, pageSize);
 
@@ -61,26 +62,31 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-
-  useEffect(()=> {
+  useEffect(() => {
     setFilterFollowers(
-      followers.filter(follower => {
-        return follower.login.toLowerCase().includes(search.toLowerCase())
+      followers.filter((follower) => {
+        return follower.login.toLowerCase().includes(search.toLowerCase());
       })
-    )
-  }, [search, followers])
+    );
+  }, [search, followers]);
 
   return (
     <>
       <Layout>
         <Header>
-        <div id="logo"><img src={logo} alt="Founders lair logo"/></div>
-          <Search
-            placeholder="search"
-            allowClear
-            onChange={(e) => {setSearch(e.target.value)}}
-            style={{ width: 441, margin: "0 113px" }}
-          />
+          <div id="header-wrapper">
+            <div id="logo">
+              <img src={logo} alt="" />
+            </div>
+            <Search
+              placeholder="search"
+              allowClear
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              style={{ width: 441, margin: "0 113px" }}
+            />
+          </div>
         </Header>
         <Content>
           <Table
