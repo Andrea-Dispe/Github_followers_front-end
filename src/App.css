@@ -217,9 +217,7 @@ td {
   height: 45px;
 }
 
-.ant-table-pagination.ant-pagination {
-  margin: 0px;
-}
+
 
 .pagination {
   display: flex;

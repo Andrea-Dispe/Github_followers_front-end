@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Github_followers_app/static/css/main.e8b3d2d5.chunk.css",
-    "main.js": "/Github_followers_app/static/js/main.c17f426c.chunk.js",
-    "main.js.map": "/Github_followers_app/static/js/main.c17f426c.chunk.js.map",
+    "main.css": "/Github_followers_app/static/css/main.2dab1e10.chunk.css",
+    "main.js": "/Github_followers_app/static/js/main.981dd67a.chunk.js",
+    "main.js.map": "/Github_followers_app/static/js/main.981dd67a.chunk.js.map",
     "runtime-main.js": "/Github_followers_app/static/js/runtime-main.ba1fd28c.js",
     "runtime-main.js.map": "/Github_followers_app/static/js/runtime-main.ba1fd28c.js.map",
     "static/css/2.4d98ed14.chunk.css": "/Github_followers_app/static/css/2.4d98ed14.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.ba505e91.chunk.js.map": "/Github_followers_app/static/js/3.ba505e91.chunk.js.map",
     "index.html": "/Github_followers_app/index.html",
     "static/css/2.4d98ed14.chunk.css.map": "/Github_followers_app/static/css/2.4d98ed14.chunk.css.map",
-    "static/css/main.e8b3d2d5.chunk.css.map": "/Github_followers_app/static/css/main.e8b3d2d5.chunk.css.map",
+    "static/css/main.2dab1e10.chunk.css.map": "/Github_followers_app/static/css/main.2dab1e10.chunk.css.map",
     "static/js/2.8322d04c.chunk.js.LICENSE.txt": "/Github_followers_app/static/js/2.8322d04c.chunk.js.LICENSE.txt",
     "static/media/random.9f120192.svg": "/Github_followers_app/static/media/random.9f120192.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.ba1fd28c.js",
     "static/css/2.4d98ed14.chunk.css",
     "static/js/2.8322d04c.chunk.js",
-    "static/css/main.e8b3d2d5.chunk.css",
-    "static/js/main.c17f426c.chunk.js"
+    "static/css/main.2dab1e10.chunk.css",
+    "static/js/main.981dd67a.chunk.js"
   ]
 }
