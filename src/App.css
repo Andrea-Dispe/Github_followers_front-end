@@ -1,7 +1,6 @@
 @import "~antd/dist/antd.css";
 
 /* CSS Reset */
-
 html,
 body,
 div,
@@ -226,13 +225,6 @@ footer{
   width: 100%;
   margin-left: 10%;
   line-height: 40px;
-  /* max-width: 1140px;
-  margin: 0 auto 50px auto;
-  height: 100%;
-  justify-content: flex-end;
-  display: flex;
-  flex-flow: column;
-  padding-left: 5%; */
 }
 
 

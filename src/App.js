@@ -7,17 +7,16 @@ import Pagination from "./components/Pagination";
 import Piede from "./components/Footer";
 import { paginate } from "./utilities/paginate";
 import logo from "./images/logo.png";
-import random from "./images/random.svg";
 
 import { Input } from "antd";
 import { Table } from "antd";
+
 
 function App() {
   const api_url = "https://api.github.com/users/mosh-hamedani/followers";
   const pageSize = 6;
   const { Header, Footer, Content } = Layout;
   const { Search } = Input;
-
   const [followers, setFollowers] = useState([]);
   const [filterFollowers, setFilterFollowers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -89,7 +88,7 @@ function App() {
             />
           </div>
         </Header>
-        <div className="main-wrapper"> 
+        <div className="main-wrapper">
           <Content>
             <Table
               dataSource={filterFollowers}
