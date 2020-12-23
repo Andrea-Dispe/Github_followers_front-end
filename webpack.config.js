@@ -4,15 +4,18 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
+      // React loader
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
+      // css loader
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      // Images loader
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [

@@ -84,7 +84,7 @@ function App() {
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
-              style={{ width: 441, margin: "0 113px" }}
+              style={{ width: 441}}
             />
           </div>
         </Header>
@@ -95,7 +95,7 @@ function App() {
               pagination={{ pageSize }}
               columns={columns}
             />
-            ;
+
             {/* <Pagination
             itemsCount={followers.length}
             pageSize={pageSize}
@@ -111,47 +111,3 @@ function App() {
 }
 
 export default App;
-
-// backup table
-
-// <Layout>
-// <Header>
-//   <Navbar />
-// </Header>
-// <Content>
-//   <table>
-//     <thead className="columns">
-//       <tr>
-//         <th>Avatar</th>
-//         <th>Username</th>
-//         <th>Repository</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       {users.map((follower) => (
-//         <tr key={follower.id}>
-//           <td>
-//             <img
-//               className="avatar"
-//               src={follower.avatar_url}
-//               alt={follower.login}
-//             />
-//           </td>
-//           <td>{follower.login}</td>
-//           <td>
-//             <a href={follower.html_url}>Visit</a>
-//           </td>
-//         </tr>
-//       ))}
-//     </tbody>
-//   </table>
-
-//   <Pagination
-//     itemsCount={followers.length}
-//     pageSize={pageSize}
-//     currentPage={currentPage}
-//     onPageChange={handlePageChange}
-//   />
-// </Content>
-// <Footer></Footer>
-// </Layout>

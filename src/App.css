@@ -163,7 +163,7 @@ section.ant-layout {
   margin: 0 auto;
 }
 
-#logo {
+.ant-input-group-wrapper {
   margin-left: 10%;
 }
 
@@ -176,14 +176,29 @@ section.ant-layout {
   main {
     width: 720px;
   }
+  #logo{
+    margin-left: 10%;
+  }
+  footer{
+    margin-left: 5%;
+  }
 }
 @media screen and (max-width: 767px) {
   main {
     width: 345px;
   }
+  #logo{
+    margin-left: 5%;
+  }
+  footer{
+    margin-left: 5%;
+  }
+  .ant-input-group-wrapper {
+    margin: 0 30px;
+  }
+
 }
 main {
-  height: 624px;
   margin: 0 auto;
   margin-top: 50px;
   background: #ffffff;
@@ -195,17 +210,13 @@ td {
   vertical-align: middle;
 }
 
-.ant-input-group-wrapper {
-  margin-left: 7%;
-}
+
 
 .columns {
   height: 45px;
 }
 
-.ant-table-pagination.ant-pagination {
-  margin: 0px;
-}
+
 
 .pagination {
   display: flex;
@@ -223,7 +234,7 @@ td {
 
 footer{
   width: 100%;
-  margin-left: 10%;
+  margin-top: 30px;
   line-height: 40px;
 }
 
