@@ -13,7 +13,8 @@ import { Table } from "antd";
 
 
 function App() {
-  const api_url = "https://api.github.com/users/mosh-hamedani/followers";
+  // const api_url = "https://api.github.com/users/mosh-hamedani/followers";
+  const serverApi = 'http://localhost:3001';
   const pageSize = 6;
   const { Header, Footer, Content } = Layout;
   const { Search } = Input;
@@ -50,7 +51,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(api_url)
+      .get(serverApi) 
       .then((res) => {
         console.log("sorted", res.data);
         setFollowers(
