@@ -1,5 +1,5 @@
 import React from "react";
-const Piede = () => {
+const Footer = () => {
   return (
     <footer>
       <div className="copyright">2020 © Founders Lair</div>
@@ -39,4 +39,4 @@ const Piede = () => {
   );
 };
 
-export default Piede;
+export default Footer;

@@ -4,7 +4,7 @@ import { Layout } from "antd";
 
 import "./App.css";
 import Pagination from "./components/Pagination";
-import Piede from "./components/Footer";
+import Footer from "./components/Footer";
 import { paginate } from "./utilities/paginate";
 import logo from "./images/logo.png";
 
@@ -13,10 +13,11 @@ import { Table } from "antd";
 
 
 function App() {
+  // this is if I want to get data directly from the frontend without the server
   // const api_url = "https://api.github.com/users/mosh-hamedani/followers";
-  const serverApi = 'http://localhost:3001';
+  const serverApi = 'https://github-followers-back-end.herokuapp.com/';
   const pageSize = 6;
-  const { Header, Footer, Content } = Layout;
+  const { Header, Content } = Layout;
   const { Search } = Input;
   const [followers, setFollowers] = useState([]);
   const [filterFollowers, setFilterFollowers] = useState([]);
@@ -51,7 +52,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(serverApi) 
+      .get(serverApi)
       .then((res) => {
         console.log("sorted", res.data);
         setFollowers(
@@ -104,7 +105,7 @@ function App() {
             onPageChange={handlePageChange}
           /> */}
           </Content>
-          <Piede></Piede>
+          <Footer />
         </div>
       </Layout>
     </>
