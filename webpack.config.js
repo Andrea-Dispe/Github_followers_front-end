@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
@@ -45,7 +47,15 @@ module.exports = {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Founders Lair Assessment',
+      filename: 'index.html',
+      template: path.resolve(__dirname, './src/public/index.html'),
+      inject: 'body'
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, './build'),
     port: 3000,
