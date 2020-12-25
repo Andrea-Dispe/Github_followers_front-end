@@ -42,12 +42,12 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    contentBase: path.resolve(__dirname, './build'),
     port: 3000,
     hot: true
   },
